@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.indi.dao.TableDao">
+    <update id="createTable" parameterType="java.lang.String">
+        CREATE TABLE `chat_web`.`${tableName}` (
+        `id` INT NOT NULL AUTO_INCREMENT,
+        `fromName` VARCHAR(45) NOT NULL,
+        `toName` VARCHAR(45) NOT NULL,
+        `message` VARCHAR(45) NULL,
+        `time` VARCHAR(45) NULL,
+        PRIMARY KEY (`id`),
+        UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+    </update>
+</mapper>
